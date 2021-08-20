@@ -55,13 +55,13 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/Tim3W4rp"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Created by Martin Jordán
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/github.png" alt="Github Logo" width={40} height={40} />
           </span>
         </a>
       </footer>
