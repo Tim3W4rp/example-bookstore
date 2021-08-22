@@ -76,7 +76,9 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
         >
           Created by Martin Jordán
-          <Image src="/github.png" alt="Github Logo" width={40} height={40} />
+          <div className="ml-2">
+            <Image src="/github.png" alt="Github Logo" width={40} height={40} />
+          </div>
         </a>
       </footer>
     </div>
