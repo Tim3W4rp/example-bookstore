@@ -55,12 +55,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="grid grid-cols-1 md:grid-cols-2 w-full">
-        <BookHero {...{ books: parseBooks(response) }} />
-        <AuthorsList {...response.authors} />
-        <BooksGrid {...parseBooks(response)} />
-      </main>
-      
+      {!loading && response ?
+        <main className="grid grid-cols-1 md:grid-cols-2 w-full">
+          {loading ? <div className="loader w-full h-full" /> : <BookHero {...{ books: parseBooks(response) }} />}
+          <AuthorsList {...response.authors} />
+          <BooksGrid {...parseBooks(response)} />
+        </main> : <div className="loader w-full h-full" />
+      }
       
       <footer className="flex justify-center w-full border-t h-20 bottom-0">
         <a

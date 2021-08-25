@@ -5,7 +5,7 @@ import { JsonApiLink } from 'apollo-link-json-api'
 import '../src/spinner.css'
 
 const jsonApiLink = new JsonApiLink({
-  uri: 'http://jsonapiplayground.reyesoft.com/v2/',
+  uri: 'https://jsonapiplayground.reyesoft.com/v2/',
 })
 
 const client = new ApolloClient({
