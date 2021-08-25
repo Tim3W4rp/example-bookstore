@@ -14,7 +14,7 @@ const Book = ({ author, title, date_published, isbn, photos, chapters }: BookTyp
 	return (
 		<div key={`${author.name}+${isbn}`} className="relative flex flex-col items-center font-mono p-4">
 			<button onClick={() => setExpanded(prevState => !prevState)} className="hover:bg-co-50">
-				<Image className="rounded-3xl blur-xl" src={`${getProfilePicture(photos)}`} width="" height="" alt=""/>
+				<Image className="rounded-3xl blur-xl" src={`${getProfilePicture(photos)}`} width="" height="" alt={placeholder.src}/>
 			</button>
 			{expanded && 
 				<div className="text-left mt-1">
@@ -24,7 +24,7 @@ const Book = ({ author, title, date_published, isbn, photos, chapters }: BookTyp
 					<div>ISBN: {isbn}</div>
 					{!!chapters.length ? 'chapters: ' : null}
 					{chapters.map(chapter =>
-					<div>
+					<div key={`${chapter.title}+${chapter.ordering}`}>
 						<div>{chapter.title} ({chapter.ordering})</div>
 					</div>)}
 				</div>

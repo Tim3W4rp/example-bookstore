@@ -38,12 +38,12 @@ const BookHero = (props: Props) => {
 			}, SECOND * 5)
 			return () => clearTimeout(timer)
 		}
-	}, [randomBook])
+	}, [randomBook, books])
 
 	return (
 		<div className="flex flex-wrap items-center col-span-2 md:col-span-1 justify-around sm:w-full lg:w-full md:w-full bg-yellow-200">
 			<div className="flex flex-col">
-				{randomBook && <Image className="md:p-0 md:w-full" src={`${getRandomPhoto(randomBook.photos)}`} width="400" height="300" alt="" />}
+				{randomBook && <Image className="md:p-0 md:w-full" src={`${getRandomPhoto(randomBook.photos)}`} width="400" height="300" alt={placeholder.src} />}
 				<div className="flex flex-col justify-right text-right p-4">
 					<div className="font-serif font-bold text-3xl">{randomBook?.title}</div>
 					<div className="font-mono">by {randomBook?.author.name}</div>
