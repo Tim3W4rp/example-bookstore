@@ -2,7 +2,6 @@ import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client'
 import { JsonApiLink } from 'apollo-link-json-api'
-import '../src/spinner.css'
 
 const jsonApiLink = new JsonApiLink({
   uri: 'https://jsonapiplayground.reyesoft.com/v2/',
