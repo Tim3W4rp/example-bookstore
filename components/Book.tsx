@@ -14,7 +14,7 @@ const Book = ({ author, title, date_published, isbn, photos, chapters }: BookTyp
 	return (
 		<div key={`${author.name}+${isbn}`} className="relative flex flex-col items-center font-mono p-4">
 			<button onClick={() => setExpanded(prevState => !prevState)} className="hover:bg-co-50">
-				<Image className="rounded-3xl blur-xl" src={`${getProfilePicture(photos)}`} width="" height="" alt={placeholder.src}/>
+				<Image className="rounded-3xl blur-xl" src={`${getProfilePicture(photos)}`} width={400} height={300} alt={placeholder.src}/>
 			</button>
 			{expanded && 
 				<div className="text-left mt-1">
