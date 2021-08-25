@@ -12,7 +12,7 @@ const getProfilePicture = (photos: PhotoType[]): string => {
 const Author = ({ name, birthplace, date_of_birth, date_of_death, photos }: AuthorType) => {
 	const [expanded, setExpanded] = useState(false)
 	return (
-		<div className="font-mono flex flex-col">
+		<div key={name} className="font-mono flex flex-col">
 			<button onClick={() => setExpanded(prevState => !prevState)} className="flex flex-row items-center justify-start m-2 hover:bg-yellow-200 active:bg-yellow-300 p-2">
 				<Image className="rounded-full" src={`${getProfilePicture(photos)}`} width="60" height="60" alt="" />
 				<div className="flex items-center font-mono ml-5">{name}</div>
