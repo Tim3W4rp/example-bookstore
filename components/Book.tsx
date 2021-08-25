@@ -1,6 +1,7 @@
 import { BookType, PhotoType } from '../types'
 import placeholder from '../public/book-cover.png'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const getProfilePicture = (photos: PhotoType[]): string => {
 	if (photos.length > 0) {
@@ -13,7 +14,7 @@ const Book = ({ author, title, date_published, isbn, photos, chapters }: BookTyp
 	return (
 		<div className="relative flex flex-col items-center font-mono p-4">
 			<button onClick={() => setExpanded(prevState => !prevState)} className="hover:bg-co-50">
-				<img className="rounded-3xl blur-xl" src={`${getProfilePicture(photos)}`}/>
+				<Image className="rounded-3xl blur-xl" src={`${getProfilePicture(photos)}`} width="" height="" alt=""/>
 			</button>
 			{expanded && 
 				<div className="text-left mt-1">
