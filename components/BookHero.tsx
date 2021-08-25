@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { getRandomItemFromArray } from '../src/utils';
 import { BookType, PhotoType } from '../types'
 import placeholder from '../public/book-cover.png'
+import Image from 'next/image'
 
 const SECOND = 1000
 
@@ -42,7 +43,7 @@ const BookHero = (props: Props) => {
 	return (
 		<div className="flex flex-wrap items-center col-span-2 md:col-span-1 justify-around sm:w-full lg:w-full md:w-full bg-yellow-200">
 			<div className="flex flex-col">
-				{randomBook && <img className="md:p-0 md:w-full" src={`${getRandomPhoto(randomBook.photos)}`} placeholder={placeholder.src} />}
+				{randomBook && <Image className="md:p-0 md:w-full" src={`${getRandomPhoto(randomBook.photos)}`} width="400" height="300" />}
 				<div className="flex flex-col justify-right text-right p-4">
 					<div className="font-serif font-bold text-3xl">{randomBook?.title}</div>
 					<div className="font-mono">by {randomBook?.author.name}</div>
