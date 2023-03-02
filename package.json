@@ -22,6 +22,7 @@
 		"tailwind-scrollbar-hide": "^1.0.3"
 	},
 	"devDependencies": {
+		"@types/node": "18.14.4",
 		"@types/react": "^18.0.28",
 		"autoprefixer": "^10.3.2",
 		"eslint": "^8.35.0",
